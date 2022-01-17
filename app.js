@@ -8,7 +8,7 @@ const app = express();
 app.get('/', (req, res) => {
   const rndInt = Math.floor(Math.random() * bgs.length) + 1;
   const bg = bgs[rndInt - 1];
-  res.send(bg);
+  res.json({ bg });
 })
 
 app.listen(PORT, () => console.log(`server listen on port ${PORT}`))
